@@ -1,0 +1,26 @@
+{
+  "name": "wordpress-portfolio-mcp-cowork",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Reusable MCP cowork server for producing portfolio case studies and WordPress draft posts.",
+  "bin": {
+    "wordpress-portfolio-mcp-cowork": "./src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "smoke": "node scripts/smoke.mjs",
+    "check": "node --check src/server.js && node --check scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "wordpress",
+    "portfolio",
+    "case-study",
+    "cowork"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "example-portfolio-case",
+  "client": "Example Client",
+  "industry": "Retail",
+  "projectType": "Website Development",
+  "language": "th",
+  "audience": "เจ้าของธุรกิจที่ต้องการเว็บไซต์ใหม่และระบบหลังบ้านที่ดูแลง่าย",
+  "challenge": "ลูกค้ามีเว็บไซต์เดิมที่แก้ไขข้อมูลยาก โหลดช้า และไม่รองรับการขยายแคมเปญการตลาดในอนาคต",
+  "solution": [
+    "ออกแบบ information architecture ใหม่ให้รองรับหน้า service, portfolio และ landing page",
+    "พัฒนาเว็บไซต์ที่ทีมลูกค้าสามารถแก้ไขข้อมูลได้เองผ่าน WordPress",
+    "ปรับ performance, responsive layout และ technical SEO ตั้งแต่ช่วงพัฒนา",
+    "เชื่อมต่อฟอร์ม lead กับอีเมลและระบบติดตามผลของทีมขาย"
+  ],
+  "results": [
+    "ทีมลูกค้าอัปเดตเนื้อหาเองได้โดยไม่ต้องพึ่ง developer ทุกครั้ง",
+    "เว็บไซต์รองรับ campaign landing page และการวัดผล conversion",
+    "โครงสร้าง SEO พร้อมสำหรับการทำ content ต่อเนื่อง"
+  ],
+  "metrics": [
+    {
+      "label": "Page speed",
+      "before": "Needs improvement",
+      "after": "Optimized",
+      "change": "Faster loading experience"
+    }
+  ],
+  "services": ["UX/UI Design", "WordPress Development", "Technical SEO"],
+  "keywords": ["WordPress portfolio", "case study website", "รับทำเว็บไซต์ WordPress"],
+  "images": [
+    {
+      "path": "./assets/example-cover.jpg",
+      "alt": "Example Client website portfolio case study"
+    }
+  ],
+  "tone": "professional, practical, client-focused",
+  "approvalStatus": "draft"
+}
