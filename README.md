@@ -26,6 +26,64 @@ MCP upload media + create WordPress draft
 
 ไม่มี npm dependency ภายนอกใน MVP นี้
 
+## Install แบบง่ายด้วย Cowork
+
+ถ้าใช้ Codex / Claude Code / AI cowork อยู่แล้ว ให้สั่งประมาณนี้ได้เลย:
+
+```text
+เอา GitHub repo นี้ไปลงให้หน่อย:
+https://github.com/ongkub/wordpress-portfolio-mcp-cowork
+
+ติดตั้งไว้ที่ /Users/your-name/wordpress-portfolio-mcp-cowork
+แล้วตั้งค่า MCP server ให้เรียกใช้งานได้
+```
+
+จากนั้น cowork จะช่วยทำขั้นตอนหลักให้:
+
+1. clone repo จาก GitHub
+2. เช็คว่ามี Node.js พร้อมใช้งาน
+3. รัน `npm run smoke` เพื่อตรวจว่า MCP server ทำงาน
+4. ช่วยเตรียม MCP config สำหรับ Claude Desktop / Claude Code
+5. ช่วยใส่ค่า WordPress env แบบไม่ commit secret เข้า Git
+
+ถ้าต้องทำเองแบบ manual:
+
+```bash
+cd /Users/your-name
+git clone https://github.com/ongkub/wordpress-portfolio-mcp-cowork.git
+cd wordpress-portfolio-mcp-cowork
+npm run smoke
+```
+
+หลังจากนั้นเอา path ของเครื่องคุณไปใส่ใน MCP config:
+
+```json
+{
+  "mcpServers": {
+    "wordpress-portfolio-mcp-cowork": {
+      "command": "node",
+      "args": ["/Users/your-name/wordpress-portfolio-mcp-cowork/src/server.js"],
+      "env": {
+        "PORTFOLIO_CASES_DIR": "/Users/your-name/wordpress-portfolio-mcp-cowork/data/cases",
+        "PORTFOLIO_BRAND_NAME": "Your Agency",
+        "PORTFOLIO_BRAND_SITE": "https://example.com",
+        "WORDPRESS_BASE_URL": "https://example.com",
+        "WORDPRESS_USERNAME": "api-user",
+        "WORDPRESS_APP_PASSWORD": "xxxx xxxx xxxx xxxx xxxx xxxx",
+        "WORDPRESS_DEFAULT_STATUS": "draft"
+      }
+    }
+  }
+}
+```
+
+Prompt ตัวอย่างหลังติดตั้ง:
+
+```text
+ใช้ wordpress-portfolio-mcp-cowork ช่วยสร้าง portfolio case study จาก case example-portfolio-case
+ตรวจข้อมูลก่อน แล้วสร้าง case study, SEO, image prompt และ WordPress payload ให้หน่อย
+```
+
 ## Quick Start
 
 ```bash
